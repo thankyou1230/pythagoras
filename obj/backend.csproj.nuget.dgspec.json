@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Quang_Pythagoras\\Pythagoras1\\backend\\backend.csproj": {}
+    "D:\\Quang_Pythagoras\\pythagoras\\backend.csproj": {}
   },
   "projects": {
-    "D:\\Quang_Pythagoras\\Pythagoras1\\backend\\backend.csproj": {
+    "D:\\Quang_Pythagoras\\pythagoras\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Quang_Pythagoras\\Pythagoras1\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\Quang_Pythagoras\\pythagoras\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\Quang_Pythagoras\\Pythagoras1\\backend\\backend.csproj",
+        "projectPath": "D:\\Quang_Pythagoras\\pythagoras\\backend.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "D:\\Quang_Pythagoras\\Pythagoras1\\backend\\obj\\",
+        "outputPath": "D:\\Quang_Pythagoras\\pythagoras\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.8.4, )"
+            },
+            "Azure.Storage.Common": {
+              "target": "Package",
+              "version": "[12.7.3, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"

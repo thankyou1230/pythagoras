@@ -3,7 +3,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2"/>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+    <PackageReference Include="Azure.Identity" Version="1.4.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.4" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.7.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup> 
 </Project>

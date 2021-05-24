@@ -12,18 +12,27 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Cors;
 using System.IO;
 using System.Net.Http.Headers;
+using Azure.Core;
+using Azure.Identity;
+using Azure.Storage;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using Azure.Storage.Sas;
+using Microsoft.AspNetCore.Hosting;
 
 namespace backend.Controllers
 {
     [EnableCors("CorsApi")]
     public class HomeController : Controller
     {
+        private readonly IWebHostEnvironment _env;
         const string DB= "Server=tcp:quang.database.windows.net,1433;Initial Catalog=PYTHAGORAS;Persist Security Info=False;User ID=quang;Password=0917787421qQ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env)
         {
             _logger = logger;
+            _env = env;
         }
 
         public IActionResult Index()
@@ -105,7 +114,26 @@ namespace backend.Controllers
             else
                 return "NOT OK";
         }
+        //############################ Upload to the BLOB #################################################
         
+        public string BlobUpload(string number, string imgPath)
+        {
+            string connectionString = "DefaultEndpointsProtocol=https;AccountName=sqlvaqgtqjtinwypuq;AccountKey=RCVhoilPxLPIot4syztuMHlPbjN5xFDmPiKBkCUCh39T7r0l54IcH6QvmppmTAYNnXd6nAsFfaBLtamRQwBJaw==;EndpointSuffix=core.windows.net";
+
+            string blobName = number+".png";
+
+            // Get a reference to a container
+            BlobContainerClient container = new BlobContainerClient(connectionString, "image");
+
+            // Get a reference to a blob
+            BlobClient blob = container.GetBlobClient(blobName);
+
+            // Upload local file at a given path to Azure storage
+
+            blob.Upload(imgPath);
+            return "Ok";
+        }
+
         //############################ Receive info form from calling api #################################
         [HttpPost]
         [Route("Upload")]
@@ -114,16 +142,16 @@ namespace backend.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var folderName = Path.Combine("assets", "Resources");
-                var pathToSave = Path.Combine("D:\\Quang_Pythagoras\\pythagoras-for-intern\\user-frontend\\src", folderName);
+                string a = file.GetType().ToString();
+                var pathToSave = Path.Combine(this._env.ContentRootPath,"wwwroot\\image");
 
                 if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    var fullPath = Path.Combine(pathToSave, fileName+".png");
-                    var dbPath = Path.Combine(folderName, fileName+".png");
+                    var savePath = Path.Combine(pathToSave,fileName + ".png");
+                    var dbPath = "https://pythagoras.azurewebsites.net/image/" + fileName + ".png";
                     var content=ContentDispositionHeaderValue.Parse(file.ContentDisposition).Name.Trim('"');
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    using (var stream = new FileStream(savePath, FileMode.Create))
                     {
                         file.CopyTo(stream);
                     }
