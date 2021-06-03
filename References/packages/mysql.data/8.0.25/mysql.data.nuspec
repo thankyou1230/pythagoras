@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MySql.Data</id>
+    <version>8.0.25</version>
+    <authors>Oracle</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://downloads.mysql.com/docs/licenses/connector-net-8.0-gpl-en.pdf</licenseUrl>
+    <projectUrl>https://dev.mysql.com/downloads/</projectUrl>
+    <iconUrl>http://www.mysql.com/common/logos/logo-mysql-170x115.png</iconUrl>
+    <description>MySql.Data.MySqlClient .Net Core Class Library</description>
+    <releaseNotes>Review ReleaseNotes.txt for details.</releaseNotes>
+    <copyright>Copyright (c) 2016, 2021, Oracle and/or its affiliates.</copyright>
+    <tags>MySql .NET Connector MySql Connector/NET netcore .Net Core MySql Conector/Net Core coreclr C/NET C/Net Core</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="BouncyCastle" version="1.8.5" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4.Streams" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Hash.xxHash" version="1.0.6" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="BouncyCastle" version="1.8.5" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4.Streams" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Hash.xxHash" version="1.0.6" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="BouncyCastle.NetCore" version="1.8.5" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4.Streams" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Hash.xxHash" version="1.0.6" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Permissions" version="4.7.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.4.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="BouncyCastle.NetCore" version="1.8.5" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4.Streams" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Hash.xxHash" version="1.0.6" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Permissions" version="4.7.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.4.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="BouncyCastle.NetCore" version="1.8.5" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Compression.LZ4.Streams" version="1.1.11" exclude="Build,Analyzers" />
+        <dependency id="K4os.Hash.xxHash" version="1.0.6" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Permissions" version="4.7.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.4.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.ComponentModel" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Configuration.Install" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Data" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Management" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Transactions" targetFramework=".NETFramework4.5.2, .NETFramework4.8" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -26,7 +26,7 @@ namespace backend.Controllers
     public class HomeController : Controller
     {
         private readonly IWebHostEnvironment _env;
-        const string DB= "Server=tcp:quang.database.windows.net,1433;Initial Catalog=PYTHAGORAS;Persist Security Info=False;User ID=quang;Password=0917787421qQ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        const string DB= "Server=tcp:pythagoras.database.windows.net,1433;Initial Catalog=pythagoras;Persist Security Info=False;User ID=quang;Password=123456789qQ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env)
