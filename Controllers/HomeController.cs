@@ -149,7 +149,7 @@ namespace backend.Controllers
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var savePath = Path.Combine(pathToSave,fileName + ".png");
-                    var dbPath = "https://pythagoras.azurewebsites.net/image/" + fileName + ".png";
+                    var dbPath = "https://quangserver.azurewebsites.net/image/" + fileName + ".png";
                     var content=ContentDispositionHeaderValue.Parse(file.ContentDisposition).Name.Trim('"');
                     using (var stream = new FileStream(savePath, FileMode.Create))
                     {
